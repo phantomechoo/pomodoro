@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoooooooro Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Amatic+SC:wght@400;700&family=Anton&family=Ballet:opsz@16..72&family=Bitcount+Prop+Single:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Edu+QLD+Hand:wght@400..700&family=Fascinate&family=Italiana&family=Jersey+10&family=League+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Nanum+Myeongjo&family=Patrick+Hand&family=Pixelify+Sans:wght@400..700&family=Playpen+Sans:wght@100..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sail&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Amatic+SC:wght@400;700&family=Anton&family=Ballet:opsz@16..72&family=Bitcount+Prop+Single:wght@100..900&family=Bitcount+Single:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Edu+QLD+Hand:wght@400..700&family=Fascinate&family=Italiana&family=Jersey+10&family=League+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Nanum+Myeongjo&family=Patrick+Hand&family=Pixelify+Sans:wght@400..700&family=Playpen+Sans:wght@100..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sail&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body {
+        display: block;
+        text-align: center;
+        height: 100vh;
+        font-family: "Pixelify Sans", sans-serif;
+        font-weight: 100;
+    }
+    #conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    .btn {
+        width: 231px;
+        height: 64px;
+        border-radius: 16px;
+        background-color: #E8F9FF;
+        border: 3px solid #D2EEFF;
+        color: #82CBFF;
+        font-family: "Pixelify Sans", sans-serif;
+        margin:20px 20px; 
+        font-size: 24px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #c6f0ff;
+    }
+
+    h1 {
+        color: #82CBFF;
+        font-size: 43px;
+        font-weight: 100;
+    }
+
+    .resim {
+        width: 260px;
+        height: 260px;
+    }
+
+    #btnTime {
+        width: 300px;
+        height: 100px;
+        font-size: 64px;
+        background-color: #E8F9FF;
+        border: 3px solid #D2EEFF;
+        color: #82CBFF;
+        border-radius: 25px;
+        font-family: "Bitcount Single", system-ui;
+    }
+
+    #btnStart {
+        width: 200px;
+        height: 50px;
+        font-size: 30px;
+        font-family: "pixelify Sans", sans-serif;
+        background-color: #E8F9FF;
+        border: 3px solid #D2EEFF;
+        color: #82CBFF;
+        border-radius: 20px;
+        margin: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    #btnStart:hover {
+        background-color: #c6f0ff;
+        transform: scale(1.08);
+        transition: 0.3s ease;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        color: #82CBFF;
+        font-size: 24px;
+        margin-right: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ff97de;
+    }
+
+    a:hover {
+        transform: scale(1.08);
+        transition: 0.3s ease-in-out;
+    }
+
+    .btn.active {
+        background-color: #c6f0ff;
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        .btn {
+            width: 120px;
+            height: 50px;
+            font-size: 16px;
+            display: inline;
+        }
+
+        .resim {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 20px;
+        }
+
+        #btnTime {
+            width: 200px;
+            height: 80px;
+            font-size: 45px;
+        }
+
+        #btnStart {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        footer {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+    }
+    
+
+</style>
+<body>
+    <h1>POMODOOOOOOORO TİMER</h1>
+    
+    <div id="conteiner1">
+        <button class="btn active" id="btn1">pomodoro</button>
+        <button class="btn" id="btn2">Short Break</button>
+        <button class="btn" id="btn3">Long Break</button>
+    </div>
+
+    <div id="conteiner2"><img src="giiif.gif" class="resim"></div>
+
+    <div><button id="btnTime">25:00</button></div>
+
+    <div><button id="btnStart">Start!</button></div>
+
+    <footer>Made with <a href="https://www.instagram.com/senanurbuyuksolak/"> &nbsp; Sena </a> &nbsp;&lt;3</footer>
+    
+    <audio id="startSound" src="./bubble.mp3"></audio>
+    <audio id="pauseSound" src="./completed.mp3"></audio>
+
+<script>
+    const buttons = document.querySelectorAll(".btn");
+    const btn1 = document.getElementById("btn1"); // Pomodoro
+    const btn2 = document.getElementById("btn2"); // Short Break
+    const btn3 = document.getElementById("btn3"); // Long Break
+    const btnTime = document.getElementById("btnTime");
+    const btnStart = document.getElementById("btnStart");
+    const startSound = document.getElementById("startSound");
+    const pauseSound = document.getElementById("pauseSound");
+
+
+    let timer;
+    let timeLeft = 1500; // default 25 dk
+    let isRunning = false;
+
+    // buton seçme
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            clearInterval(timer); // süreyi sıfırla
+            isRunning = false;
+            btnStart.textContent = "Start!";
+            btnStart.classList.remove("active");
+
+            if (btn.id === "btn1") {
+                timeLeft = 25 * 60; // Pomodoro
+            } else if (btn.id === "btn2") {
+                timeLeft = 5 * 60; // Short Break
+            } else if (btn.id === "btn3") {
+                timeLeft = 15 * 60; // Long Break
+            }
+            updateDisplay();
+        });
+    });
+
+    btnStart.addEventListener("click", toggleTimer);
+
+    function toggleTimer() {
+        if (!isRunning) {
+            // START
+            startSound.play();
+            timer = setInterval(updateTimer, 1000);
+            btnStart.textContent = "Pause";
+            btnStart.classList.add("active");
+            isRunning = true;
+        } else {
+            // PAUSE
+            clearInterval(timer);
+            btnStart.textContent = "Start!";
+            btnStart.classList.remove("active");
+            isRunning = false;
+        }
+    }
+
+    function updateTimer() {
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateDisplay();
+        } else {
+            clearInterval(timer);
+            btnStart.textContent = "Start!";
+            btnStart.classList.remove("active");
+            isRunning = false;
+
+            pauseSound.play();
+        }
+    }
+
+    function updateDisplay() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+
+        btnTime.textContent = `${minutes}:${seconds}`;
+        
+        document.title = `${minutes}:${seconds} - Time to focus!`;
+    }
+
+    btnStart
+
+    // sayfa açıldığında 25:00 gözüksün
+    updateDisplay();
+</script>
+
+</body>
+</html>
